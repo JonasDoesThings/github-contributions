@@ -13,3 +13,7 @@ fetchContributions("JonasDoesThings", 2021).then(contributions => {
   console.log(contributions)
 });
 ```
+
+## License
+The project is licensed under the MIT license.    
+Check the [LICENSE](./LICENSE) file, for the full legal-notice.
