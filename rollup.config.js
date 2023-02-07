@@ -1,40 +1,38 @@
 import packageJson from './package.json' assert {type: 'json'};
 
-import resolve from '@rollup/plugin-node-resolve';
-import typescript from '@rollup/plugin-typescript';
-import terser from '@rollup/plugin-terser';
-import commonjs from '@rollup/plugin-commonjs';
+import dts from 'rollup-plugin-dts';
+import esbuild from 'rollup-plugin-esbuild';
 import analyze from 'rollup-plugin-analyzer';
 
-export default {
+const name = packageJson.main.replace(/\.js$/, '');
+
+const bundle = config => ({
+  ...config,
   input: 'src/index.ts',
-  output: [
-    {
-      file: packageJson.module,
+  external: id => !/^[./]/.test(id),
+});
+
+export default [
+  bundle({
+    plugins: [esbuild(), analyze({summaryOnly: true})],
+    output: [
+      {
+        file: `${name}.js`,
+        format: 'cjs',
+        sourcemap: true,
+      },
+      {
+        file: `${name}.mjs`,
+        format: 'es',
+        sourcemap: true,
+      },
+    ],
+  }),
+  bundle({
+    plugins: [dts()],
+    output: {
+      file: `${name}.d.ts`,
       format: 'es',
-      sourcemap: true,
     },
-    {
-      file: packageJson.main,
-      format: 'cjs',
-      sourcemap: true,
-    },
-  ],
-  plugins: [
-    commonjs({
-      include: 'node_modules/**',
-    }),
-    resolve({
-      browser: true,
-      extensions: ['.js', '.ts', '.tsx'],
-    }),
-    typescript({
-      tsconfig: './tsconfig.json',
-      declaration: true,
-    }),
-    terser(),
-    analyze({
-      summaryOnly: true,
-    }),
-  ],
-};
+  }),
+];
