@@ -1,6 +1,6 @@
 import type {ContributionsDay, ContributionsYear} from './types/contribution_year';
 import {parseGitHubContributionsHTML} from './utils/contributions_parser';
-import 'whatwg-fetch';
+import 'isomorphic-fetch';
 
 /**
  * Fetches the contributions graph for the given GitHub username

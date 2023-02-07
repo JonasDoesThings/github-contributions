@@ -33,6 +33,6 @@
     "vitest": "^0.28.4"
   },
   "dependencies": {
-    "whatwg-fetch": "^3.6.2"
+    "isomorphic-fetch": "^3.0.0"
   }
 }
