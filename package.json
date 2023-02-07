@@ -1,8 +1,16 @@
 {
-  "name": "github-contributions",
+  "name": "@jonasdoesthings/github-contributions",
   "version": "1.0.0",
+  "description": "simple library for fetching a user's github contribution graph",
   "license": "MIT",
   "type": "module",
+  "files": [
+    "dist"
+  ],
+  "repository": {
+    "url": "https://github.com/JonasDoesThings/github-contributions",
+    "type": "git"
+  },
   "main": "dist/github-contributions.js",
   "module": "dist/github-contributions.mjs",
   "typings": "dist/github-contributions.d.ts",
