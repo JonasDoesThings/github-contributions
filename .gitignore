@@ -1,0 +1,8 @@
+*.iml
+.idea/
+
+.yarn
+node_modules/
+
+dist/
+package.tgz
