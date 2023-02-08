@@ -18,7 +18,8 @@
     "build": "rm -rf dist/ && rollup -c",
     "prepack": "yarn build",
     "prepublishOnly": "yarn test",
-    "test": "vitest",
+    "test": "vitest run",
+    "test:watch": "vitest watch",
     "coverage": "vitest run --coverage",
     "lint": "eslint --ext .js,.jsx,.ts,.tsx ./src"
   },
