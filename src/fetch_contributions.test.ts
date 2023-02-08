@@ -17,6 +17,7 @@ describe('fetch contributions for user JonasDoesThings', () => {
     expect(contributionsGraph.year).toStrictEqual(2022);
     expect(contributionsGraph.username).toStrictEqual(TEST_USER_NAME);
     expect(contributionsGraph.contributions.length).toStrictEqual(365);
+    expect(contributionsGraph.contributions.find(day => day.date === '2022-01-06')!.numberOfContributions).toStrictEqual(45);
     expect(contributionsGraph.contributions.find(day => day.date === '2022-10-23')!.numberOfContributions).toStrictEqual(13);
     expect(contributionsGraph.contributions.find(day => day.date === '2022-12-10')!.numberOfContributions).toStrictEqual(3);
     expect(contributionsGraph.contributions.find(day => day.date === '2022-12-24')!.numberOfContributions).toStrictEqual(0);
