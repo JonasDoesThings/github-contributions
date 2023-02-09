@@ -23,6 +23,9 @@ fetchContributions("JonasDoesThings", 2021).then(contributions => {
 });
 ```
 
+## API
+`fetchContributions(username [string], <optional: year [number]>)`  
+Returns: `Promise<ContributionsYear>`
 ## License
 The project is licensed under the MIT license.    
 Check the [LICENSE](./LICENSE) file, for the full legal-notice.
