@@ -8,8 +8,11 @@
     "dist"
   ],
   "repository": {
-    "url": "https://github.com/JonasDoesThings/github-contributions",
+    "url": "https://github.com/JonasDoesThings/github-contributions.git",
     "type": "git"
+  },
+  "bugs": {
+    "url": "https://github.com/JonasDoesThings/github-contributions/issues"
   },
   "main": "dist/github-contributions.js",
   "module": "dist/github-contributions.mjs",
