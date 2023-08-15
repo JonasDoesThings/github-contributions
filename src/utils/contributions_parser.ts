@@ -12,7 +12,7 @@ function parseGitHubContributionsHTML(rawHTML: string) {
 
   const htmlLines = rawHTML.split('\n');
   htmlLines
-    .filter(line => line.trimStart().startsWith('<rect'))
+    .filter(line => line.trimStart().startsWith('<td'))
     .forEach(line => {
       const date = ISO_DATE_REGEX.exec(line)?.groups!['date'];
       if(!date) {
