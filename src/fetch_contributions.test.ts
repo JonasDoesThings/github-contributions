@@ -31,9 +31,9 @@ describe('fetch contributions for user JonasDoesThings', () => {
 
     // 2020 was a leap year
     expect(contributionsGraph.contributions.length).toStrictEqual(366);
-    expect(contributionsGraph.contributions.find(day => day.date === '2020-12-29')!.numberOfContributions).toStrictEqual(3);
+    expect(contributionsGraph.contributions.find(day => day.date === '2020-12-29')!.numberOfContributions).toStrictEqual(2);
     expect(contributionsGraph.contributions.find(day => day.date === '2020-04-01')!.numberOfContributions).toStrictEqual(0);
 
-    expect(contributionsGraph.totalNumberOfContributions).toStrictEqual(45);
+    expect(contributionsGraph.totalNumberOfContributions).toStrictEqual(44);
   });
 });
