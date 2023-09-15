@@ -14,18 +14,23 @@ or
 ```typescript
 import {fetchContributions} from '@jonasdoesthings/github-contributions';
 
-fetchContributions("JonasDoesThings").then(contributions => {
-  console.log(contributions)
+fetchContributions("JonasDoesThings").then((contributionsYear) => {
+  console.log(contributionsYear);
+  console.log(contributionsYear.contributions[14].numberOfContributions);
 });
 
-fetchContributions("JonasDoesThings", 2021).then(contributions => {
-  console.log(contributions)
+fetchContributions("JonasDoesThings", 2021).then((contributionsYear) => {
+  console.log(contributionsYear.totalNumberOfContributions);
+  console.log(contributionsYear.contributions.find((day) => day.date === '2021-08-29')?.numberOfContributions);
 });
 ```
 
 ## API
 `fetchContributions(username [string], <optional: year [number]>)`  
-Returns: `Promise<ContributionsYear>`
+Returns: `Promise<ContributionsYear>`.  
+  
+See [src/types/contribution_year.ts](src/types/contribution_year.ts) for the type definition.  
+
 ## License
 The project is licensed under the MIT license.    
 Check the [LICENSE](./LICENSE) file, for the full legal-notice.

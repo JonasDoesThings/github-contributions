@@ -10,7 +10,7 @@ interface ContributionsYear {
 }
 
 interface ContributionsDay {
-  // ISO-8601 formatted date string
+  // ISO-8601 formatted date string (YYYY-MM-DD)
   date: string;
   // The number of visible contributions on this day
   numberOfContributions: number;
