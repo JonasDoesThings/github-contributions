@@ -31,6 +31,9 @@ Returns: `Promise<ContributionsYear>`.
   
 See [src/types/contribution_year.ts](src/types/contribution_year.ts) for the type definition.  
 
+## Testing
+Run `yarn test` to execute all tests.
+
 ## License
 The project is licensed under the MIT license.    
 Check the [LICENSE](./LICENSE) file, for the full legal-notice.
