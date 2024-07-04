@@ -1,6 +1,6 @@
 {
   "name": "@jonasdoesthings/github-contributions",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "simple library for fetching a user's github contribution graph",
   "license": "MIT",
   "type": "module",
