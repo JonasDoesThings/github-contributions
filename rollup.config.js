@@ -1,4 +1,4 @@
-import packageJson from './package.json' assert {type: 'json'};
+import packageJson from './package.json' with {type: 'json'};
 
 import dts from 'rollup-plugin-dts';
 import esbuild from 'rollup-plugin-esbuild';
