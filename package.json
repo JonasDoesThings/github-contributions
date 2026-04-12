@@ -24,18 +24,19 @@
     "test": "vitest run",
     "test:watch": "vitest watch",
     "coverage": "vitest run --coverage",
-    "lint": "eslint --ext .js,.jsx,.ts,.tsx ./src"
+    "lint": "eslint ./src *.js"
   },
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^7.17.0",
-    "@typescript-eslint/parser": "^7.17.0",
+    "@eslint/js": "^10.0.1",
+    "@stylistic/eslint-plugin": "^5.10.0",
     "esbuild": "^0.28.0",
-    "eslint": "8.57.1",
+    "eslint": "^10.2.0",
     "rollup": "^4.60.1",
     "rollup-plugin-analyzer": "^4.0.0",
     "rollup-plugin-dts": "^6.4.1",
     "rollup-plugin-esbuild": "^6.2.1",
     "typescript": "6.0.2",
+    "typescript-eslint": "^8.58.2",
     "vitest": "^4.1.4"
   },
   "dependencies": {
